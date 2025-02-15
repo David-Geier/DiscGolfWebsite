@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Disc Golf</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="home container-fluid">
+
+    <script>
+        // Check if there are any div elements and update or show alert
+        window.onload = function () {
+            const firstDiv = document.querySelector('div');
+            if (firstDiv) {
+                firstDiv.classList.add('bg-success'); // Bootstrap class for green background
+            } else {
+                alert("There are no divs to update!");
+            }
+        };
+    </script>
+
+    <!-- Logo Image -->
+    <img src="images/logo.jpg" alt="Logo" class="site-logo">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">Disc Golf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="meetThePros.html">Meet the Pros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutTheDiscs.html">About the Discs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formBreakdown.html">Form Breakdown</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactMe.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Welcome, to Disc Golf</h1>
+        </div>
+    </div>
+
+    <!-- Quote for home page -->
+    <div class="row">
+        <div class="col-12">
+            <div class="h2HomeContainer text-center">
+                <h2>"Traditional golf is a good walk spoiled; disc golf is a good walk improved." - Source Unknown</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Short message about disc golf -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <p class="home">
+                Disc golf, much like ball golf, is a sport of extreme concentration and focus. It requires great patience,
+                as it is inherently frustrating, but it gets me off my computer and out of the house, hot or cold, rain or shine.
+            </p>
+        </div>
+    </div>
+
+    <!-- Why I love the sport -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <p class="home">
+                Hi, I'm David Geier, and I love disc golf. My favorite part is how much thinking goes into each and every shot. Being
+                both a wing and a gyroscope, spin and speed are both proportionally necessary to achieving the desired distance and
+                shot shape. This is heavily influenced by form. Smooth is far, and developing consistent technique takes a lot of
+                repetition, observation, and careful consideration. I also love that nearly anyone can play it. The community is also extremely positive across
+                the board, especially for newer players.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+    

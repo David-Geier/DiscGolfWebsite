@@ -1,0 +1,277 @@
+/* styles.css */
+
+/* Generally applicable CSS rules below */
+
+/* Style for the floating logo */
+.site-logo {
+    position: fixed; /* Keep the logo fixed at the top left */
+    top: 10px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
+    width: 100px; /* Set a fixed width for the logo */
+    z-index: 1000; /* Ensure the logo is on top of other elements */
+}
+
+/* Make nav stick */
+nav {
+    position: sticky; /* Make the navigation bar sticky */
+    top: 0; /* Stick at the top */
+}
+
+/* Style for the navigation links */
+nav ul {
+    text-align: center; /* Center navigation */
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Display links in a line */
+    margin-right: 15px; /* Add space between links */
+}
+
+nav ul li a {
+    color: #fff; /* White text for the links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Add underline when hovering */
+}
+  
+/* Apply dark gray background to the entire page */
+body {
+    min-height: 100vh;
+    overflow-y: scroll;
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text for contrast */
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Light blue color for all h1 tags */
+h1 {
+    color: #4b7bf6; /* Light blue color */
+    position: sticky; /* Make the navigation bar sticky */
+    top: 0; /* Stick at the top */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Center Page Names */
+}
+
+
+/* Home Page Specific Styling */
+
+/* Adjusting the home page background with lighter gray and reduced overlay */
+body.home {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), /* Lighter overlay with reduced opacity */
+        url('images/homepageBackground1.jpg') top 120px center no-repeat,
+        url('images/homepageBackground2.jpg') top 120px left no-repeat,
+        url('images/homepageBackground3.jpg') top 120px right no-repeat,
+        #555; /* Lighter gray background */
+    background-size: 33.33% auto, 33.33% auto, 33.33% auto; /* Maintain image proportions */
+    background-attachment: fixed; /* Fix the background to prevent cropping */
+    min-height: 100vh;
+    overflow: overlay;
+    padding-bottom: 10px;
+}
+
+/* Adjust the spacing for the h1 to stay above the images */
+body.home h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 0px;
+    padding-top: 20px; /* Add padding to create space above the images */
+    color: #4b7bf6; /* Light blue color */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body.home {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+        url('images/homepageBackground1.jpg') top 120px center no-repeat,
+        url('images/homepageBackground2.jpg') top 120px left no-repeat,
+        url('images/homepageBackground3.jpg') top 120px right no-repeat,
+        #555 !important; /* Lighter gray background */
+    background-size: 33.33% auto, 33.33% auto, 33.33% auto;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: overlay;
+    padding-bottom: 10px;
+}
+
+/* Styling for the quote container or highlighted text */
+.h2HomeContainer {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #4b7bf6; /* Light blue color */
+    font-size: 16px; /* Slightly larger font for desktops */
+    font-style: italic; /* Italicize Quotes */
+    padding: 2px 8px; /* Reduced padding for a thinner bar */
+    line-height: 1.2; /* Compact line height */
+    text-align: center; /* Center-align text */
+}
+
+/* Mobile adjustments for .h2HomeContainer */
+@media (max-width: 768px) {
+    .h2HomeContainer {
+        font-size: 14px; /* Smaller font for readability */
+        padding: 2px 5px; /* Minimal padding for small screens */
+        line-height: 1.2; /* Consistent line height */
+    }
+}
+
+/* Improving readability of paragraphs */
+p.home {
+    font-size: 16px; /* Slightly larger font size */
+    line-height: 1.6; /* Increased line spacing */
+    max-width: 800px; /* Constrain paragraph width for better readability */
+    margin: 20px auto; /* Center paragraphs with added space */
+    padding: 10px;
+    color: #fff; /* White text for contrast */
+}
+
+/* Media Query: Adjustments for mobile-friendly layout */
+@media (max-width: 768px) {
+    /* Optimize background settings for mobile */
+    body.home {
+        background-size: cover; /* Make background images cover the screen */
+        background-position: center; /* Center align for mobile */
+        background-attachment: scroll; /* Prevent fixed background for smoother scrolling */
+    }
+
+    /* Responsive text sizing for headers */
+    body.home h1 {
+        font-size: 32px; /* Smaller font for mobile */
+        padding-top: 15px; /* Adjust padding */
+    }
+
+    body.home h2 {
+        font-size: 18px; /* Slightly smaller for readability */
+        margin-top: 10px;
+    }
+
+    /* Adjust quote container for readability on small screens */
+    .h2HomeContainer {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* Center-align and adjust paragraph size */
+    p.home {
+        font-size: 14px; /* Smaller font for readability */
+        max-width: 90%; /* Reduced width for small screens */
+        margin: 10px auto;
+    }
+}
+
+
+/* CSS rules specific to Meet the Pros Page */
+
+
+body.meetThePros {
+    /* Set background image for meetThePros */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Lighter overlay with reduced opacity */
+        url('images/meetTheProsBackground.jpg');
+    background-position-x: center;
+    background-position: top;
+    background-size: auto;
+    background-repeat: no-repeat; /* Prevent images from repeating */
+}
+
+.meetTheProsDiv dt {
+    padding-top: 15px;
+    text-align: center;
+}
+.meetTheProsDiv dd {
+    text-align: center;
+}
+.meetTheProsDiv p {
+    text-align: center;
+    max-width: 1000px;
+}
+
+
+/* Make adjustments for mobile viewers */
+
+@media (max-width: 768px) {
+    /* Scale down all text sizes slightly for smaller screens */
+    body {
+        font-size: 90%; /* Adjusts all font sizes proportionally */
+    }
+
+    /* Ensure container elements like .wrapper are fluid */
+    .wrapper, .container {
+        width: 100%;
+        padding: 0 10px; /* Add padding for mobile view */
+    }
+
+    /* Stack navigation links vertically for mobile */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0; /* Adjust spacing for vertical layout */
+    }
+
+    /* Ensure images are responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* shop.html CSS */
+
+body.shop {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Styling for the title */
+body.shop h1 {
+    margin: 20px 0; /* Add margin to separate title and navigation */
+    text-align: center;
+}
+
+/* Styling for vertical navigation in the shop page */
+.vertical-nav {
+    flex-grow: 1; /* Allow vertical nav to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Evenly space items vertically */
+}
+
+.vertical-nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width for links */
+    text-align: left; /* Align text to the left */
+}
+
+.vertical-nav ul li {
+    display: block;
+    font-size: 1.2em; /* Larger font for bigger lines */
+    padding: 15px 0; /* Additional padding for larger clickable area */
+}
+
+.vertical-nav ul li a {
+    color: #fff; /* Match link color */
+    text-decoration: none; /* Remove underline from links */
+    padding-left: 10px; /* Slight left padding for spacing */
+}
+
+.vertical-nav ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Ensure the first div element uses Bootstrap's bg-success class */
+body.home > div:first-of-type {
+    background-color: green !important;
+}
